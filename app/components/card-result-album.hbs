@@ -1,0 +1,8 @@
+<div class="card card-album">
+    <img class="album-img" src={{get @result.images "0.url"}} alt="{{@result.name}} by {{get @result.artists "0.name"}}"> 
+    <b class="album-title">{{@result.name}}</b>
+    <div class="album-info">
+        <p class="album-year">{{get-year @result.release_date}}</p>&nbsp;•&nbsp; 
+        <p class="album-artist" >{{get @result.artists "0.name"}}</p>
+    </div>
+</div>

@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #000;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    background-color: #131313;
+    float: left;
+    //border: 2px solid #989898 ;
+    border-radius: 15px;
+    margin-left: 10px;
+    padding: 10px;
+    height:78vh; 
+    display: flex;
+    align-items: center;
+    padding-top: 3%;
+    flex-direction: column;
+    overflow: auto;
+  }
+  
+  .left, .right {
+    width: 23.5%;
+  }
+  
+  .middle {
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.section-title{
+    align-self: flex-start;
+    margin-left: 5%;
+}
+.header {
+    //background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-family: bold;
+}
+.icon {
+    width: 20px;
+}
+.bottom-section {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* **** player controls **** */
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    //border: 2px solid #989898 ;
+    width: 100%;
+}
+
+/* .player-controls button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    /* font-size: 1rem; 
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+}
+
+.player-controls button:hover {
+    background-color: #555;
+}
+ */
+footer {
+    width: 100%;
+    
+    color: #fff;
+    padding: 5px;
+    z-index: 1000; 
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ***** Scroll Style *****/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+/* *** Search bar **** */
+  .search-container{
+    background: #fff;
+    height: 50px;
+    width: 500px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.search-input{
+    width: 400px;
+}
+
+.search-container:hover {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+        inset -4px -4px 6px 0 rgba(255,255,255,.2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container .search-input{
+    border: none;
+    outline:none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.search-btn {
+    font-size: large;
+}
+button.search-btn, button.btn-play, button.btn-like, button.btn-remove, button.btn-player {
+    border: none;
+    background: none;
+}
+.search-container .search-btn .fas{
+    color: #5cbdbb;
+}
+
+/* *** Card for tracks ******/
+.card, h2{
+    font-family: system-ui, 'Segoe UI', Roboto;
+}
+h2 {
+    color: #fff;
+}
+.card-track{
+    display: flex;
+    width: 80%;
+    height: 100px;
+    /* padding: 10px; */
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-track:hover{
+    background-color: #1d1d1d;
+    border-radius: 10px;
+}
+.track-img {
+    width: 12%;
+    border-radius: 10px;
+    margin: 10px;
+}
+.track-info {
+    margin: 10px;
+    width: 60%;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+.track-artist {
+    color: #555;
+}
+.track-length {
+    margin: 5px;
+    width: 10%;
+    color: #555;
+    border-radius: 15px;
+}
+
+.track-play {
+    display: flex;
+    width: 20%;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.btn-play{
+    width: 30%;
+    font-size: large;
+}
+.btn-play > i {
+    color:#08ae5e;
+    
+}
+.btn-play > i:hover{
+    color: #42e797;
+    font-size: larger;
+ }
+
+.btn-like > i {
+    color:#ae1008;
+}
+
+.btn-like > i:hover{
+   font-weight: 800;
+   font-size: larger;
+}
+
+.btn-like{
+    width: 30%;
+    font-size: large;
+}
+
+/* **** Card for Albums **** */
+.card-album-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card-album{
+    display: flex;
+    width: 30%;
+    height: fit-content;
+    /* padding: 10px; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album-img {
+    width: 80%;
+    border-radius: 15px;
+    /* margin: 10px; */
+}
+
+.album-title {
+    margin-top: 10px;
+    /* width: 60%; */
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    width: 80%;
+    height: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+.album-info {
+    color: #555;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 43px;
+    justify-content: flex-start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* **** Card for Artist **** */
+.card-artist{
+    display: flex;
+    width: 30%;
+    height: 40%;
+    /* padding: 10px; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist-img {
+    width: 80%;
+    border-radius: 50%;
+    max-height: 80%;
+    /* margin: 10px; */
+}
+
+.artist-title {
+    margin-top: 10px;
+    /* width: 60%; */
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    width: 145px;
+    height: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ***  Playhead */
+.playhead-wrapper {
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.playhead-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; 
+    height: 4px;
+    background-color: #ccc;
+    display: flex;
+    cursor: pointer;
+}
+
+.playhead {
+    height: 100%;
+    background-color: #007bff;
+    width: 0;
+}
+
+.btn-player{
+    font-size: xx-large;
+    cursor: pointer;
+}
+.btn-player > i {
+    color:#08ae5e;
+    
+}
+.btn-player > i:hover{
+    color: #42e797;
+    font-size: larger;
+ }
+
+ .player-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: system-ui, "Segoe UI", Roboto;
+    width: -webkit-fill-available;
+ }
+ .player-album-cover {
+    width: 90%;
+    border-radius: 4%;
+    max-height: 90%;
+    /* margin: 10px;*/
+ }
+ .player-track-info{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: flex-start;
+ }
+
+ .player-track-artist{
+    color: #555;
+    font-weight: 600;
+ }
+
+/* ***  Playlist **** */
+.playlist {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-playlist {
+    display: flex;
+    /* width: 80%; */
+    height: 60px;
+    /* padding: 10px; */
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-playlist:hover{
+    background-color: #1d1d1d;
+    border-radius: 10px;
+}
+
+.btn-remove > i {
+    color:#ccc;
+}
+
+.btn-remove > i:hover{
+   font-weight: 800;
+   font-size: larger;
+   color:#ae1008;
+}
+
+.btn-remove{
+    width: 30%;
+    font-size: large;
+}
+
+.playlist-info{
+    margin: 10px;
+    width: 50%;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.playlist-play{
+    display: flex;
+    width: 25%;
+    padding: 5px;
+    justify-content: space-around;
+}
+
+.playlist-img{
+    width: 16%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.playlist-title{
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 130px;
+    height: fit-content;
+    white-space: nowrap;
+}

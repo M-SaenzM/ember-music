@@ -1,0 +1,6 @@
+<div class="search-container">
+    <input type="text" {{on "input" @updateQuery}} name="search" placeholder="What do you want to listen to?" class="search-input">
+    <button type="button" {{on "click" @search}} class="search-btn">
+        <i class="fas fa-search"></i>      
+    </button>
+</div>

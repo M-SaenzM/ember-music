@@ -1,0 +1,16 @@
+<article class="card card-track">
+    <img class="track-img" src="{{get @result.album.images '0.url'}}" alt="{{@result.name}} cover">
+    <div class="track-info">
+        <b class="track-title">{{@result.name}}</b>
+        <p class="track-artist">{{get @result.artists '0.name'}}</p>
+    </div>
+    <p class="track-length">{{convert-to-minutes @result.duration_ms}}</p>
+    <div class="track-play">
+        <button title="Add to playlist" class="btn-like" {{on "click" (fn @addSong @result.uri (get @result.album.images '0.url') @result.name (get @result.artists '0.name') @result.duration_ms)}} type="button">
+            <i class="far fa-heart"></i>
+        </button>
+        <button title="Play Song" class="btn-play" {{on "click" (fn @playSong @result.uri @result.name @result.artists @result.album)}} type="button">
+            <i class="fa fa-play"></i>
+        </button>
+    </div>
+</article>

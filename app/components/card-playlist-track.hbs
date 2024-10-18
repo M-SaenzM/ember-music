@@ -1,0 +1,16 @@
+<div class="card card-playlist">
+    <img class="playlist-img" src="{{@song.img}}" alt="{{@song.title}} - {{@song.artist}}">
+    <div class="playlist-info">
+        <b class="playlist-title">{{@song.title}}</b>
+        <p class="track-artist" >{{@song.artist}}</p>
+    </div>
+   {{!--  <p class="track-length">{{convert-to-minutes @song.length}}</p> --}}
+    <div class="playlist-play">
+         <button title="Remove from playlist" class="btn-remove" type="button" {{on "click" (fn @removeSong @song.id)}} >
+                <i class="fas fa-minus-circle"></i>
+            </button>
+        <button title="Play song" class="btn-play" type="button" {{on "click" (fn @playSong @song.uri)}}>
+            <i class="fa fa-play"></i>
+        </button>
+    </div>
+</div>

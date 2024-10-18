@@ -1,0 +1,15 @@
+<ul class="playlist">
+    <h2>Liked Songs</h2>
+    <br>
+   {{#if this.playlist}}
+        {{#each this.playlist as |song|}}
+            <li>
+                <CardPlaylistTrack @playSong={{this.playSong}} @playSongByUri={{this.playSongByUri}} @song={{song}} @removeSong={{this.removeSong}}/>
+            </li>
+        {{/each}}
+    {{else}}
+        <li class="empty-playlist">
+            <h4>Playlist Empty</h4>
+        </li>
+    {{/if}} 
+</ul>

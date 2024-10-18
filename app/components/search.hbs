@@ -1,0 +1,36 @@
+
+<div class="row-content">
+<SearchBar @updateQuery={{this.updateQuery}} 
+@search={{this.search}} />
+</div>
+<br>
+{{#if this.searchTrackResults}}
+      <h2 class="section-title">Songs</h2>
+      <br>
+      {{log "playSong function:" this.playSong}}
+        {{#each this.searchTrackResults as |result|}}
+            <CardResultTrack @songDetails={{songDetails}} 
+            @result={{result}} @playSong={{this.playSong}}
+             @togglePlayback={{this.togglePlayback}}
+              @addSong={{this.song.addSong}}/>
+        {{/each}}
+{{/if}}
+{{#if this.searchAlbumResults}}
+    <h2 class="section-title">Albums</h2>
+    <br>
+    <div class="card-album-container">
+    {{#each this.searchAlbumResults as |result|}}
+        <CardResultAlbum @result={{result}} />
+    {{/each}}
+    </div>
+{{/if}}
+{{#if this.searchArtistResults}}
+    <h2 class="section-title">Artists</h2>
+    <br>
+    <div class="card-album-container">
+    {{#each this.searchArtistResults as |result|}}
+        <CardResultArtist @result={{result}} />
+    {{/each}}
+    </div>
+{{/if}}
+

@@ -1,0 +1,39 @@
+<HeaderBar />
+
+<div class="row">
+    <section class="column left">
+        <PlaylistDisplay @playSongById={{this.playSongById}}/>
+    </section>
+    
+    <section  class="column middle">
+        <Search />
+    </section>
+    
+    <section class="column right">
+        <Player />
+    </section>
+</div>
+
+<section class="bottom-section">
+    <PlayerControls
+     @currentSong={{this.currentSong}}
+      @startScrubbing={{this.startScrubbing}}
+       @onChange={{this.handlePlayheadStyleChange}}
+        @currentTrack={{this.currentTrack}}
+         @togglePlayback={{this.togglePlayback}}
+          @isPlaying={{this.isPlaying}} 
+          @result={{this.result}}
+           @playSong={{this.playSong}} @
+           pauseSong={{this.pauseSong}}/>
+<FooterBar />
+</section>
+
+
+
+ 
+
+    
+
+    
+
+  

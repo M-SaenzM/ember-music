@@ -1,0 +1,9 @@
+<button title="{{if this.isPlaying "Pause song" "Play song"}}" type="button" class="btn-player" {{on "click" (fn this.togglePlayback this.currentTrack.currentTrackUri)}}>
+    <i class="fa {{if this.isPlaying "fa-pause-circle" "fa-play-circle"}}"></i>
+</button>
+<div class="playhead-wrapper">
+    <div class="playhead-container" {{on "click" this.startScrubbing}}>
+        <div class="playhead" style={{this.playheadStyle}}></div>
+    </div>
+</div>
+
