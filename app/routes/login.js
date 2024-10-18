@@ -9,7 +9,9 @@ export default class LoginRoute extends Route {
     const state = this.generateRandomString(16);
 
     const client_id = '1904b35142b34ec281525b39f9e832f5';
-    const redirect_uri = 'https://ember-music-gray.vercel.app/login-callback';
+    const redirect_uri = process.env.NODE_ENV === 'production'
+  ? 'https://ember-music-gray.vercel.app/login-callback'
+  : 'http://localhost:4200/login-callback';
     const scope =
       'user-read-private user-read-email user-modify-playback-state user-read-playback-state streaming';
 

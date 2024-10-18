@@ -15,8 +15,9 @@ export default class LoginCallbackRoute extends Route {
     const state = params.state;
     const client_id = '1904b35142b34ec281525b39f9e832f5';
     const client_secret = 'd6a05bd8ea15410f98274e2b9e8922c3';
-    const redirect_uri = 'https://ember-music-gray.vercel.app/login-callback';
-
+    const redirect_uri = process.env.NODE_ENV === 'production'
+    ? 'https://ember-music-gray.vercel.app/login-callback'
+    : 'http://localhost:4200/login-callback';
     if (state === null) {
       console.error('State Error');
       return;
